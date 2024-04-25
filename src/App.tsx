@@ -1,11 +1,11 @@
 import './App.css'
 
 function App() {
-
+  const a = 5
 
   return (
     <>
-      <h1>Hello world</h1> ;
+      <h1>{a}</h1>
     </>
   )
 }
