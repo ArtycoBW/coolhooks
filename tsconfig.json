@@ -34,6 +34,8 @@
     "src",
     "src/declarations.d.ts",
     "src/types.d.ts",
-    "eslintrc.cjs"
+    "eslintrc.cjs",
+    "vite.config.ts",
+    "tests/main.test.ts"
   ]
 }
