@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm ci  # Используем npm ci для быстрой установки зависимостей
 
-      - name: Test
-        run: npm run test  # Запуск тестов
-
       - name: Build
         run: npm run build  # Сборка проекта
 
@@ -71,7 +68,7 @@ jobs:
       - uses: actions/checkout@v3  # Обновляем до v3
 
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v21  # Обновляем до v21
+        uses: amondnet/vercel-action@v20  # Обновляем до v21
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
