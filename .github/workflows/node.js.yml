@@ -11,42 +11,42 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [20.x]  # Обновляем версию Node.js
+        node-version: [20.x]
 
     steps:
-      - uses: actions/checkout@v3  # Обновляем до v3
+      - uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4  # Обновляем до v4
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm ci  # Используем npm ci для быстрой установки зависимостей
+        run: npm ci
 
       - name: Build
-        run: npm run build  # Сборка проекта
+        run: npm run build
 
   push_to_Docker_Hub:
     runs-on: ubuntu-latest
     needs: [build_test]
     steps:
-      - uses: actions/checkout@v3  # Обновляем до v3
+      - uses: actions/checkout@v3
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2  # Обновляем до v2
+        uses: docker/setup-qemu-action@v2
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2  # Обновляем до v2
+        uses: docker/setup-buildx-action@v2
 
       - name: Login to DockerHub
-        uses: docker/login-action@v2  # Обновляем до v2
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.REACTUSERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
-        uses: docker/build-push-action@v5  # Обновляем до v5
+        uses: docker/build-push-action@v5
         with:
           context: ./
           file: ./Dockerfile
@@ -65,10 +65,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build_test]
     steps:
-      - uses: actions/checkout@v3  # Обновляем до v3
+      - uses: actions/checkout@v3
 
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v20  # Обновляем до v21
+        uses: amondnet/vercel-action@v21
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
@@ -84,6 +84,6 @@ jobs:
         if: success()
         run: echo "Build and deployment succeeded!"
 
-      - name: Notify failure
+      - name: Notify failure 
         if: failure()
         run: echo "Build or deployment failed!"
