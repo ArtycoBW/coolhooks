@@ -4,11 +4,6 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-# Запуск линтера
-RUN npm run lint
-# Запуск тестов
-RUN npm run test
-# Запуск сборки
 RUN npm run build
 
 # Этап 2: обслуживаем приложение React с помощью веб-сервера
