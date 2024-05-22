@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]  # Обновляем версию Node.js
+        node-version: [20.x]  # Обновляем версию Node.js
 
     steps:
       - uses: actions/checkout@v3  # Обновляем до v3
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/checkout@v3  # Обновляем до v3
 
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v21  # Обновляем до v21
+        uses: amondnet/vercel-action@v20  # Обновляем до v21
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
