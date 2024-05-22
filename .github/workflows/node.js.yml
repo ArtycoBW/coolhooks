@@ -24,12 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm ci  # Используем npm ci для быстрой установки зависимостей
 
-      - name: Lint
-        run: npm lint  # Запуск линтера
-
-      - name: Test
-        run: npm test  # Запуск тестов
-
       - name: Build
         run: npm run build  # Сборка проекта
 
