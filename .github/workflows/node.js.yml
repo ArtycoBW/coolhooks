@@ -25,10 +25,10 @@ jobs:
         run: npm ci  # Используем npm ci для быстрой установки зависимостей
 
       - name: Lint
-        run: npm run lint  # Запуск линтера
+        run: npm lint  # Запуск линтера
 
       - name: Test
-        run: npm run test  # Запуск тестов
+        run: npm test  # Запуск тестов
 
       - name: Build
         run: npm run build  # Сборка проекта
