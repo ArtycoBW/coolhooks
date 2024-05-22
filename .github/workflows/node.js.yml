@@ -54,12 +54,13 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.REACTUSERNAME }}/shopping-app-react:latest
+          no-cache: true
+          tags: ${{ secrets.REACTUSERNAME }}/sm-frontend:latest
 
       - name: Run the image in a container
         uses: addnab/docker-run-action@v3
         with:
-          image: ${{ secrets.REACTUSERNAME }}/shopping-app-react:latest
+          image: ${{ secrets.REACTUSERNAME }}/sm-frontend:latest
           run: |
             echo "running the docker image"
 
