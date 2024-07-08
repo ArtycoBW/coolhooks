@@ -9,7 +9,7 @@ module.exports = {
     createDefaultProgram: true,
     tsconfigRootDir: './',
   },
-  extends: ['plugin:prettier/recommended'],
+  extends: ['plugin:prettier/recommended', 'plugin:storybook/recommended'],
   rules: {
     '@typescript-eslint/no-unused-expressions': [
       'warn',

@@ -23,11 +23,8 @@
     "noUncheckedIndexedAccess": true,
     "paths": {
       "common/*": ["src/common/*"],
-      "modules/*":["src/modules/*"],
-      "@mes/*": ["src/mes/*"],
-      "sus/*": ["src/apps/sus/*"],
-      "sm/*": ["src/apps/sm/*"],
-      "mnemo/*": ["src/apps/mnemo/*"]
+      "@/*": ["./src/*"],
+      "@/tests": ["./tests"]
     }
   },
   "include": [
