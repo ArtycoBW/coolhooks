@@ -1,7 +1,7 @@
 # Этап 1: Создание приложения React
 FROM node:18-alpine AS builder
 WORKDIR /app
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 RUN npm ci
 COPY . .
 RUN npm run build
