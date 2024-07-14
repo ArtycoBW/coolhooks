@@ -1,0 +1,27 @@
+.wrapper {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.title {
+		font-size: 36px;
+		font-weight: 700;
+		font-family: "Montserrat", sans-serif;
+		color: #F37022;
+	}
+
+	> input {
+		padding: 10px 15px;
+		border: 1px solid #F37022;
+		background-color: white;
+		color: #F37022;
+		border: 1px solid #F37022;
+		border-radius: 5px;
+		font-size: 16px;
+		font-weight: 500;
+		font-family: "Montserrat", sans-serif;
+		outline: none;
+	}
+}
