@@ -32,7 +32,7 @@ const Demo = () => {
 }
 
 export default {
-  title: 'Hooks/useCounter',
+  title: 'Хуки/useCounter',
   component: Demo,
 } as Meta
 
