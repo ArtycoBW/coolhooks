@@ -1,0 +1,40 @@
+.wrapper {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.description {
+		font-size: 36px;
+		font-weight: 700;
+		font-family: "Montserrat", sans-serif;
+		color: #F37022;
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	
+		> button {
+			background-color: #F37022;
+			padding: 10px 15px;
+			border: 1px solid #F37022;
+			background-color: white;
+			color: #F37022;
+			border: 1px solid #F37022;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 500;
+			font-family: "Montserrat", sans-serif;
+			transition: all 0.3s ease;
+		} :hover {
+			background-color: #F37022;
+			border: 1px solid #F37022;
+			color: white;
+			cursor: pointer;
+			scale: 1.1;
+		}
+	}
+}
