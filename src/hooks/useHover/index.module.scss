@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.hoverBox {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #333;
+	border-radius: 10px;
+  display: flex;
+	padding: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.hoverBox:hover {
+  border-color: #545656;
+}
+
+.hovered {
+  background-color: #F37022;
+  color: white;
+}
+
+.text {
+  font-size: 20px;
+  text-align: center;
+}
