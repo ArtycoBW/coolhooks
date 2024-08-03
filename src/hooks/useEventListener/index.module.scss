@@ -1,0 +1,14 @@
+.wrapper {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.info {
+		font-size: 30px;
+		font-weight: 700;
+		font-family: "Montserrat", sans-serif;
+		color: #F37022;
+	}
+}
