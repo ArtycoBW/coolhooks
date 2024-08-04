@@ -63,7 +63,7 @@ jobs:
 
   Vercel:
     runs-on: ubuntu-latest
-    needs: [build_storybook]
+    needs: [build_storybook, Vercel]
     steps:
       - uses: actions/checkout@v3
 
