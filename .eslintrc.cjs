@@ -64,7 +64,7 @@ module.exports = {
     'react/state-in-constructor': ['warn', 'never'],
     'react/style-prop-object': 'error',
     'react/jsx-key': 'off',
-    'react/no-array-index-key': 'warn',
+    'react/no-array-index-key': 'off',
     'react/jsx-no-bind': [
       'warn',
       {
