@@ -33,8 +33,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: storybook-static
-          CLEAN: true
-          TARGET_FOLDER: docs
+          token: ${{ secrets.GITHUB_TOKEN }}  # Заменено GITHUB_TOKEN на token
+          branch: gh-pages
+          folder: storybook-static
+          clean: true
+          target-folder: docs  # Заменено TARGET_FOLDER на target-folder
