@@ -3,7 +3,6 @@ name: Storybook
 on:
   push:
     branches: [main]
-    paths: ["**/*.stories.tsx", "src/**"]
 
 jobs:
   Build:
