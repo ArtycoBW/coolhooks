@@ -31,11 +31,10 @@ jobs:
       - name: Build Storybook 🔧
         run: npm run build-storybook
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to Vercel
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # Заменено GITHUB_TOKEN на token
-          branch: gh-pages
-          folder: storybook-static
-          clean: true
-          target-folder: docs  # Заменено TARGET_FOLDER на target-folder
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID }}
+          vercel-args: "--prod"
