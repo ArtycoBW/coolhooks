@@ -1,5 +1,4 @@
 name: Storybook
-
 on:
   push:
     branches: [main]
@@ -12,18 +11,17 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
+
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1
-      - name: Install and Build 🔧
-        run:
-          npm run build-storybook
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+
+      - name: Install and Build Storybook 🔧
+        run: npm run build-storybook
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
         with:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: storybook-static
-          CLEAN: true
-          TARGET_FOLDER: docs
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./storybook-static
