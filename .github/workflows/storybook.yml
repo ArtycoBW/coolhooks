@@ -20,7 +20,7 @@ jobs:
         run:
           npm run build-storybook
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.5.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           BRANCH: gh-pages
