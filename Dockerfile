@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-RUN npm run build
+RUN npm run build-storybook
 
 # Этап 2: обслуживаем приложение React с помощью веб-сервера
 FROM nginx:stable-alpine
