@@ -15,7 +15,7 @@ const Demo = () => {
       </p>
       <div className={classes.buttons}>
         <button type="button" onClick={() => toggle()} className={classes.button}>
-          Переключить
+          Переключить 
         </button>
         <button type="button" onClick={() => toggle(true)} className={classes.button}>
           Установить (true)
