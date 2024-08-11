@@ -18,7 +18,7 @@ const Demo = () => {
           Инкремент
         </button>
         <button type="button" onClick={() => dec()} className={classes.button}>
-          Дикремент
+          Дикремент 
         </button>
         <button type="button" onClick={() => set(5)} className={classes.button}>
           Задать (5)
