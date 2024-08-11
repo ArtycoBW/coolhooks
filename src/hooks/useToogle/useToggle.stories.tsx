@@ -4,7 +4,7 @@ import { useToggle } from './useToggle'
 import classes from './index.module.scss'
 
 const Demo = () => {
-  const [value, toggle] = useToggle(['blue', 'orange', 'black', 'teal', 'purple'] as const)
+  const [value, toggle] = useToggle(['blue', 'orange', 'black', 'teal', 'purple', 'red'] as const)
 
   return (
     <div className={classes.wrapper}>
