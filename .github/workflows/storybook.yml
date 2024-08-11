@@ -32,9 +32,11 @@ jobs:
         run: npm run build-storybook
 
       - name: Deploy to Vercel
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: vercel/action@v2
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
-          vercel-args: "--prod"
+          vercel-args: '--prod'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
