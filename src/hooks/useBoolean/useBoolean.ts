@@ -19,6 +19,7 @@ type UseBooleanReturn = [
  * @example
  * const [on, toggle] = useBoolean()
  */
+
 const useBoolean = (initialValue = false): UseBooleanReturn => {
   const [value, setValue] = useState(initialValue)
   const toggle = (value?: boolean) => setValue((prevValue) => value ?? !prevValue)
