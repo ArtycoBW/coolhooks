@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { useWebSocket } from './useWebSocket'
+import useWebSocket from './useWebSocket'
 import classes from './index.module.scss'
 
 const Demo = () => {

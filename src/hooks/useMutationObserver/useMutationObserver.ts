@@ -9,7 +9,7 @@ import { useEffect, useRef } from 'react'
  * @param {HTMLElement | (() => HTMLElement) | null} target - Целевой элемент для наблюдения за мутациями.
  * @return {RefObject<Element>} Ссылка на наблюдаемый элемент.
  */
-export function useMutationObserver<Element extends HTMLElement>(
+function useMutationObserver<Element extends HTMLElement>(
   callback: MutationCallback,
   options: MutationObserverInit,
   target?: HTMLElement | (() => HTMLElement) | null,
@@ -32,3 +32,5 @@ export function useMutationObserver<Element extends HTMLElement>(
 
   return ref
 }
+
+export default useMutationObserver

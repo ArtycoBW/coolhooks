@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { useBoolean } from './useBoolean'
+import useBoolean from './useBoolean'
 import classes from './index.module.scss'
 
 const Demo = () => {

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { useCounter } from './useCounter'
+import useCounter from './useCounter'
 import classes from './index.module.scss'
 
 const Demo = () => {
@@ -18,7 +18,7 @@ const Demo = () => {
           Инкремент
         </button>
         <button type="button" onClick={() => dec()} className={classes.button}>
-          Дикремент 
+          Дикремент
         </button>
         <button type="button" onClick={() => set(5)} className={classes.button}>
           Задать (5)

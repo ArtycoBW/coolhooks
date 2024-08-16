@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useCallback } from 'react'
 
 type Validator<T> = (value: T, values?: Record<string, T>) => string | null
@@ -96,7 +97,7 @@ interface UseFormReturn<T> {
  *   <button type="submit">Submit</button>
  * </form>
  */
-export function useForm<T extends Record<string, any>>(config: UseFormConfig<T>): UseFormReturn<T> {
+function useForm<T extends Record<string, any>>(config: UseFormConfig<T>): UseFormReturn<T> {
   const { fields, onSubmit, validateOnChange = true, validateOnBlur = true, cacheKey } = config
 
   // Инициализация состояния формы
@@ -292,3 +293,5 @@ export function useForm<T extends Record<string, any>>(config: UseFormConfig<T>)
     validateForm,
   }
 }
+
+export default useForm

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { useHover } from './useHover'
+import useHover from './useHover'
 import classes from './index.module.scss'
 
 const Demo = () => {

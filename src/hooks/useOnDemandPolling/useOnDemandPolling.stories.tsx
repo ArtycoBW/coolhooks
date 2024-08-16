@@ -2,12 +2,12 @@
 
 import React, { useCallback, useState } from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { useOnDemandPolling } from './useOnDemandPolling'
+import useOnDemandPolling from './useOnDemandPolling'
 import classes from './index.module.scss'
 
 const Demo = () => {
   const [data, setData] = useState<string>('Загрузка...')
-  const [interval, setInterval] = useState<number>(5000)
+  const [interval, _] = useState<number>(5000)
   const [error, setError] = useState<string | null>(null)
 
   // Симуляция запроса к серверу

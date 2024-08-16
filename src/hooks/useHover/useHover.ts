@@ -43,7 +43,7 @@ export interface UseHoverReturn<T extends HTMLElement> {
  *   {isHovered ? 'Наведено' : 'Не наведено'}
  * </button>
  */
-export function useHover<T extends HTMLElement>(options?: UseHoverOptions): UseHoverReturn<T> {
+function useHover<T extends HTMLElement>(options?: UseHoverOptions): UseHoverReturn<T> {
   const { initialIsHovered = false, useMouseEnter = false, useMouseLeave = false } = options || {}
 
   // Состояние для отслеживания, наведена ли мышь
@@ -78,3 +78,5 @@ export function useHover<T extends HTMLElement>(options?: UseHoverOptions): UseH
 
   return { isHovered, ref }
 }
+
+export default useHover

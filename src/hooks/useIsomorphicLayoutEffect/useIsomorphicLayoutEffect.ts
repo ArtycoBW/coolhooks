@@ -9,4 +9,5 @@ import { useEffect, useLayoutEffect } from 'react'
  * @example
  * useIsomorphicLayoutEffect(() => console.log('эффект'), [])
  */
-export const useIsomorphicLayoutEffect = isClient ? useLayoutEffect : useEffect
+const useIsomorphicLayoutEffect = isClient ? useLayoutEffect : useEffect
+export default useIsomorphicLayoutEffect

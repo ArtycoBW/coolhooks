@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
-import { useMutationObserver } from '../useMutationObserver/useMutationObserver'
-import { useIsomorphicLayoutEffect } from '../useIsomorphicLayoutEffect/useIsomorphicLayoutEffect'
+import useMutationObserver from '../useMutationObserver/useMutationObserver'
+import useIsomorphicLayoutEffect from '../useIsomorphicLayoutEffect/useIsomorphicLayoutEffect'
 
 /** Тип опций для хука useDocumentTitle */
 export interface UseDocumentTitleOptions {
@@ -29,7 +29,7 @@ export type UseDocumentTitleReturn = [
  * @example
  * const [title, setTitle] = useDocumentTitle();
  */
-export function useDocumentTitle(value?: string, options?: UseDocumentTitleOptions): UseDocumentTitleReturn {
+function useDocumentTitle(value?: string, options?: UseDocumentTitleOptions): UseDocumentTitleReturn {
   const prevTitleRef = useRef(document.title)
   const [title, setTitle] = useState(value ?? document.title)
 
@@ -67,3 +67,5 @@ export function useDocumentTitle(value?: string, options?: UseDocumentTitleOptio
 
   return [title, set]
 }
+
+export default useDocumentTitle

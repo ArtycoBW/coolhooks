@@ -1,7 +1,7 @@
 {
   "name": "vite",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -53,6 +54,11 @@
     "vite": "^5.2.0",
     "vite-plugin-checker": "^0.6.4",
     "vite-plugin-inspect": "^0.8.4",
-    "vitest": "^1.5.1"
+    "vitest": "^1.5.1",
+    "semantic-release": "^24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtycoBW/coolhooks.git"
   }
 }

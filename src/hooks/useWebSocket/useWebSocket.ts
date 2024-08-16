@@ -53,7 +53,7 @@ interface WebSocketHook {
  * // Повторное подключение
  * reconnect();
  */
-export const useWebSocket = (url: string, options: UseWebSocketOptions = {}): WebSocketHook => {
+const useWebSocket = (url: string, options: UseWebSocketOptions = {}): WebSocketHook => {
   const { shouldReconnect = true, reconnectInterval = 5000, maxReconnectAttempts = Infinity, protocols } = options
 
   const [status, setStatus] = useState<WebSocketStatus>('CONNECTING')
@@ -145,3 +145,5 @@ export const useWebSocket = (url: string, options: UseWebSocketOptions = {}): We
     error,
   }
 }
+
+export default useWebSocket

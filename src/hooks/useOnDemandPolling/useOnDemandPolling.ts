@@ -60,7 +60,7 @@ interface PollingOptions {
   immediateStart?: boolean // флаг для немедленного начала опроса
 }
 
-export function useOnDemandPolling({
+function useOnDemandPolling({
   initialInterval,
   onPoll,
   enabled = true,
@@ -153,3 +153,5 @@ export function useOnDemandPolling({
 
   return { changeInterval, startPolling, stopPolling }
 }
+
+export default useOnDemandPolling

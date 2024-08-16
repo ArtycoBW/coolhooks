@@ -52,7 +52,7 @@ export interface UseCounter {
  * @example
  * const { count, dec, inc, reset, set } = useCounter({ initialValue: 5, min: 0, max: 10 });
  */
-export const useCounter = ((...params: unknown[]) => {
+const useCounter = (...params: unknown[]) => {
   const initialValue =
     typeof params[0] === 'number'
       ? params[0]
@@ -96,4 +96,6 @@ export const useCounter = ((...params: unknown[]) => {
   }
 
   return { count, set, inc, dec, reset } as const
-}) as UseCounter
+}
+
+export default useCounter

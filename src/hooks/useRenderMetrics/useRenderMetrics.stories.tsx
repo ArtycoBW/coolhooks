@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { Meta, StoryFn } from '@storybook/react'
 import classes from './index.module.scss'
-import { useRenderMetrics } from './useRenderMetrics'
+import useRenderMetrics from './useRenderMetrics'
 
 const Demo = () => {
   const [count, setCount] = useState<number>(0)

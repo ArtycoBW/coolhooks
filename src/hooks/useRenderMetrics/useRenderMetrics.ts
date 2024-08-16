@@ -26,7 +26,7 @@ interface PerformanceWithMemory extends Performance {
  * @example
  * const renderMetrics = useRenderMetrics('MyComponent');
  */
-export function useRenderMetrics(name = 'Unknown', logMetrics = true): RenderMetrics | null {
+function useRenderMetrics(name = 'Unknown', logMetrics = true): RenderMetrics | null {
   // Счетчик рендеров
   const renderCount = useRef<number>(0)
   // Время последнего рендера
@@ -91,3 +91,5 @@ export function useRenderMetrics(name = 'Unknown', logMetrics = true): RenderMet
 
   return metrics
 }
+
+export default useRenderMetrics

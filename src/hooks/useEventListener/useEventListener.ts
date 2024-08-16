@@ -44,7 +44,7 @@ type SupportedEventTarget = HTMLElement | Window | Document
 // Определяем тип обработчика событий
 type EventHandler<K extends keyof WindowEventMap> = (event: WindowEventMap[K]) => void
 
-export function useEventListener<K extends keyof WindowEventMap>(
+function useEventListener<K extends keyof WindowEventMap>(
   eventName: K,
   handler: EventHandler<K>,
   element: SupportedEventTarget | null = window, // Разрешаем null здесь
@@ -75,3 +75,5 @@ export function useEventListener<K extends keyof WindowEventMap>(
     }
   }, [eventName, element, options]) // Обновляем useEffect только при изменении eventName, element или options
 }
+
+export default useEventListener

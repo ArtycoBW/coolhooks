@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { Meta, StoryFn } from '@storybook/react'
 import classes from './index.module.scss'
-import { usePrevious } from './usePrevious'
+import usePrevious from './usePrevious'
 
 const Demo = () => {
   const [count, setCount] = useState(0)

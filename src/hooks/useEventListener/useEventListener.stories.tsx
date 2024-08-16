@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { useEventListener } from './useEventListener'
+import useEventListener from './useEventListener'
 import classes from './index.module.scss'
 
 const Demo = () => {

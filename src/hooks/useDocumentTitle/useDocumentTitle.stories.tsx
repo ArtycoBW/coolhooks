@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { useDocumentTitle } from './useDocumentTitle'
+import useDocumentTitle from './useDocumentTitle'
 import classes from './index.module.scss'
 
 const Demo = () => {

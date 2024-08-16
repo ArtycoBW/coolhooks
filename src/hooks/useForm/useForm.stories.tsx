@@ -1,7 +1,7 @@
 // src/hooks/useForm/useForm.stories.tsx
 
 import { Meta, StoryFn } from '@storybook/react'
-import { useForm } from '../useForm/useForm'
+import useForm from '../useForm/useForm'
 import React from 'react'
 import classes from './index.module.scss'
 

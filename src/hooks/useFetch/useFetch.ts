@@ -11,7 +11,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
  * const { data, error, loading, refetch } = useFetch('https://api.example.com/data');
  */
 
-export function useFetch<T>(url: string, options?: RequestInit) {
+function useFetch<T>(url: string, options?: RequestInit) {
   const cache = useRef<{ [url: string]: { data: T; timestamp: number } }>({})
   const [loading, setLoading] = useState<boolean>(false)
   const [data, setData] = useState<T | null>(null)
@@ -66,3 +66,5 @@ export function useFetch<T>(url: string, options?: RequestInit) {
 
   return { data, error, loading, refetch }
 }
+
+export default useFetch
